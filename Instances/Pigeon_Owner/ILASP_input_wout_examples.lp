@@ -37,6 +37,7 @@ next(X,X+1) :- hole(X), hole(X+1).
 #modeb(2,lessthan(var(hole),var(pigeon))).
 #modeb(2,lessthan(var(pigeon),var(hole))).
 %%%
+%%%
 #modeb(2,assignColor(var(pigeon),var(color))).
 #modeb(2,color(var(color))).
 #modeb(1,maxcolor(var(color))).

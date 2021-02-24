@@ -1,0 +1,38 @@
+#!/bin/bash
+NUMITERATION=1
+TIMEOUT=900
+CSVFILE=experiments.csv
+
+shopt -s nullglob
+echo "Problem,Encoding,Instance,Pre-processing,Result,Model,Time,Solving,1st Model,Unsat,CPU,Pre-proc Time(Nanos)" > $CSVFILE
+for DIR in ../Instances/*
+    do
+        for ins in $DIR/Experiments/*.lp
+            do
+                filename=$(basename -- "$ins")
+		        id="${filename%.*}"
+                for (( repeat=1; repeat<=$NUMITERATION; repeat++ )) ; do
+                        echo "$DIR,active_BK,$id,OK,$(clingo $DIR/active_BK.lp $DIR/input.lp $ins -q  --time-limit=$TIMEOUT | sed ':a;N;$!ba;s/\n//g'| sed -E "s/.*(\.|p)(SATISFIABLE|UNSATISFIABLE|UNKNOWN)(TIME LIMIT   : [0-9]+)?Models       : ([0-9+]*)Calls        : [0-9+]*Time         : ([0-9.]*)s \(Solving: ([0-9.]*)s ... Model: ([0-9.]*)s Unsat: ([0-9.]*)s\)CPU Time     : ([0-9.]*)s/\2,\4,\5,\6,\7,\8,\9/"),0" >> $CSVFILE
+                done
+                for (( repeat=1; repeat<=$NUMITERATION; repeat++ )) ; do
+                        echo "$DIR,active_BK_sat,$id,OK,$(clingo $DIR/active_BK_sat.lp $DIR/input.lp $ins -q  --time-limit=$TIMEOUT | sed ':a;N;$!ba;s/\n//g'| sed -E "s/.*(\.|p)(SATISFIABLE|UNSATISFIABLE|UNKNOWN)(TIME LIMIT   : [0-9]+)?Models       : ([0-9+]*)Calls        : [0-9+]*Time         : ([0-9.]*)s \(Solving: ([0-9.]*)s ... Model: ([0-9.]*)s Unsat: ([0-9.]*)s\)CPU Time     : ([0-9.]*)s/\2,\4,\5,\6,\7,\8,\9/"),0" >> $CSVFILE
+                done
+                for (( repeat=1; repeat<=$NUMITERATION; repeat++ )) ; do
+                        echo "$DIR,BASE,$id,OK,$(clingo $DIR/input.lp $ins -q  --time-limit=$TIMEOUT | sed ':a;N;$!ba;s/\n//g'| sed -E "s/.*(\.|p)(SATISFIABLE|UNSATISFIABLE|UNKNOWN)(TIME LIMIT   : [0-9]+)?Models       : ([0-9+]*)Calls        : [0-9+]*Time         : ([0-9.]*)s \(Solving: ([0-9.]*)s ... Model: ([0-9.]*)s Unsat: ([0-9.]*)s\)CPU Time     : ([0-9.]*)s/\2,\4,\5,\6,\7,\8,\9/"),0" >> $CSVFILE
+                    done
+                for (( repeat=1; repeat<=$NUMITERATION; repeat++ )) ; do
+                        start_time=`date +%s%N` 
+                        gringo --output=smodels $DIR/input.lp $ins > temp.txt 
+                        timeout 900s ../src/SBASS/sbass < temp.txt > temp2.txt
+                        if [ $? == 124 ]; then
+                            echo "$DIR,SBASS,$id,Timeout,UNKNOWN,0+,$TIMEOUT,0,0,0,0,$TIMEOUT" >> $CSVFILE
+                        else
+                            pretime=$(expr `date +%s%N` - $start_time)
+                            echo "$DIR,SBASS,$id,OK,$(clasp temp2.txt -q  --time-limit=$TIMEOUT | sed ':a;N;$!ba;s/\n//g'| sed -E "s/.*(\.|p)(SATISFIABLE|UNSATISFIABLE|UNKNOWN)(TIME LIMIT   : [0-9]+)?Models       : ([0-9+]*)Calls        : [0-9+]*Time         : ([0-9.]*)s \(Solving: ([0-9.]*)s ... Model: ([0-9.]*)s Unsat: ([0-9.]*)s\)CPU Time     : ([0-9.]*)s/\2,\4,\5,\6,\7,\8,\9/"),$pretime" >> $CSVFILE
+                        fi
+            done
+        done 
+    done
+    rm temp.txt temp2.txt
+
+

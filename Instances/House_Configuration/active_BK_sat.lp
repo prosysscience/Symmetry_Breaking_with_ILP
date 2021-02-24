@@ -14,11 +14,12 @@ maxthing(X) :- thing(X), not thing(X+1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mode bias (vars of type cabinet and thing)
 % 1st call
-%   p=1 c=2 t=2 
-:- cabinetTOthing(V2,V1), lessthan(V1,V2).
+%   p=1 c=2 t=2 -sat 
+%   p=2 c=2 t=4 -sat
+:- cabinetTOthing(V1,V2), lessthan(V1,V3), lessthan(V2,V1). 
+:- cabinetTOthing(V2,V3), lessthan(V1,V2), maxthing(V3).
 %Increase mode bias (vars of type person)
 % 2nd call
-%   p=2 c=2 t=4 
-:- not lessthan(V1,V2), not maxperson(V1), personTOthing(V1,V2). 
-:- lessthan(V3,V1), maxthing(V2), personTOthing(V1,V2).
+%   p=2 c=3 t=4 -sat
+:- lessthan(V2,V1), personTOthing(V1,V2).
 

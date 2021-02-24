@@ -1,50 +1,60 @@
-import os
 # -----------------------------------------------------------------------------------------------------------
-#	Input files/directories
+#	Input/Output files
 # -----------------------------------------------------------------------------------------------------------
-# Program for detect the symmetries: SBASS
-SBASS= os.path.dirname(__file__) + "/SBASS/sbass"
+# General ASP file for finding all the non-symmetric assignments
+ASP_ALL_SYM="./src/permutations.lp"
 
-# Program for solving the ILP task: ILASP
-ILASP=os.path.dirname(__file__)+"/ILASP4/ILASP"
-
-# Directory with instances that define the general positive examples 
+# Directory with instances that define the default positive examples 
 GEN="/Gen/"
 
 # Directory with instances analysed with SBASS 
 S="/S/"
 
-# non ground ASP program in input
+# Output file that contains the general positive examples, computed from DEFAULT_DATA
+DEFAULT_EXAMPLES="/default_positive_examples.lp"
+
+# non ground ASP program 
 ASP_FILE_NAME="/input.lp"
 
-# ASP file with the learned constraints and auxiliary predicates
+# ASP file with the learned constraints
 ACTIVE_BK="/active_BK.lp"
+
+# All the answer set for the current ASP_FILE_NAME and ACTIVE_BK
+ALL_AS_FILE="/all_AS.txt"
+
+# ground ASP program in smodels format, from ASP_FILE_NAME and ACTIVE_BK
+SMODELS_FILE="/smodels.gnd"
+
+# file with all generators found by SBASS
+GENERATORS_FILE="/generators.txt"
+
+# Output file with the considered generators, translated in atoms
+OUT_GENERATORS_FILE="/generators_translated.txt"
+
+# ASP file with all the permutations considered OUT_GENERATORS_FILE
+TEMP_ASP_ALL_SYM="/permutation_input.lp"
+
+# ASP file that select a subset of permutations in TEMP_ASP_ALL_SYM
+PERMUTATION_RANGE="/permutation_range.txt"
+
+# File that contains the non symmetric assignments from ASP_ALL_SYM, TEMP_ASP_ALL_SYM and PERMUTATION_RANGE and the current answer set
+OUT_SYM_FILE="/non_sym_assignment.txt"
+
+# Temp file that contains the negative examples of the current instance
+TEMP_EXAMPLES_FILE="/current_neg_examples.lp"
+
+# Output file that contains the negative examples for all the considered instances
+NEG_EXAMPLES_FILE="/neg_examples.lp"
+
+# Output file that contains the positive examples for all the considered instances
+POS_EXAMPLES_FILE="/pos_examples.lp"
+
+# Sbass output: input program and new ground sbc in smodels format
+SBASS_OUTPUT="/sbass_output.txt"
 
 # ILASP program without positive and negative examples
 ILASP_NO_EX="/ILASP_input_wout_examples.lp"
 
-# -----------------------------------------------------------------------------------------------------------
-#	Temp files
-# -----------------------------------------------------------------------------------------------------------
-
-# Output file that contains the general positive examples, computed from the instances in GEN
-EXAMPLES_GEN="/examples_gen.lp"
-
-# ground ASP program in smodels format, from ASP_FILE_NAME, ACTIVE_BK, and the current instance in S
-SMODELS_FILE="/smodels.gnd"
-
-# file with the set of generators found by SBASS for SMODELS_FILE
-GENERATORS="/generators.txt"
-
-# Output file with the considered generators, translated in atoms
-SYMBOLIC_GENERATORS="/generators_translated.txt"
-
-# Output file that contains positive examples for all the instances in S
-POS_EXAMPLES_S="/examples_S_pos.lp"
-
-# Output file that contains negative examples for all the instances in S
-NEG_EXAMPLES_S="/examples_S_neg.lp"
-
-# ILASP input: ILASP_NO_EX + ACTIVE_BK + POS_EXAMPLES_S + EXAMPLES_GEN + NEG_EXAMPLES_S
+# ILASP input: ILASP_NO_EX + ACTIVE_BK + POS_EXAMPLES_FILE + DEFAULT_EXAMPLES + NEG_EXAMPLES_FILE  
 ILASP_INPUT="/ILASP_input.lp"
 

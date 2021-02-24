@@ -1,0 +1,14 @@
+#pos(id0def_p1_h1_c1,{},{},{pigeon(1). hole(1). color(1).}).
+#pos(id0def_p3_h5_c3,{},{},{pigeon(3). hole(5). color(3).}).
+#pos(id0def_p1_h2_c1,{},{},{pigeon(1). hole(2). color(1).}).
+#pos(id0def_p2_h2_c1,{},{},{pigeon(2). hole(2). color(1).}).
+#pos(id0def_p2_h3_c1,{},{},{pigeon(2). hole(3). color(1).}).
+#pos(id0def_p2_h4_c1,{},{},{pigeon(2). hole(4). color(1).}).
+#pos(id0def_p3_h4_c1,{},{},{pigeon(3). hole(4). color(1).}).
+#pos(id0def_p3_h3_c1,{},{},{pigeon(3). hole(3). color(1).}).
+#pos(id0def_p2_h3_c2,{},{},{pigeon(2). hole(3). color(2).}).
+#pos(id0def_p2_h4_c2,{},{},{pigeon(2). hole(4). color(2).}).
+#pos(id0def_p2_h5_c2,{},{},{pigeon(2). hole(5). color(2).}).
+#pos(id0def_p3_h4_c2,{},{},{pigeon(3). hole(4). color(2).}).
+#pos(id0def_p3_h5_c2,{},{},{pigeon(3). hole(5). color(2).}).
+#pos(id0def_p5_h8_c4,{},{},{pigeon(5). hole(8). color(4).}).
