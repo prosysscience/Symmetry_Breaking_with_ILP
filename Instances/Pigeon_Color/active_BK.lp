@@ -28,4 +28,3 @@ maxcolor(C) :- color(C), not color(C+1).
 %   p=3 h=6 c=3
 %:- assignColor(V1,V3), lessthan(V1,V3), lessthan(V2,V1).
 
-

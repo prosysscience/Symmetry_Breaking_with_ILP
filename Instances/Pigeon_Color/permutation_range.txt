@@ -1,1 +1,0 @@
-permutation(3;4).assign(assignColor(3,1),1). assign(assignColor(2,1),1). assign(assignColor(1,1),1).
