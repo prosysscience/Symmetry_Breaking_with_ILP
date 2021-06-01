@@ -1,0 +1,24 @@
+# To obtain in ABK the constraints used in ENUM
+python ./src/main.py Instances/Pigeon_Owner/ --iter=1 --files o1_c1_p3_h3.lp 
+python ./src/main.py Instances/Pigeon_Owner/ --iter=2 --files o1_c2_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ --iter=2a --files o1_c2_p2_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ --iter=3 --files o2_c1_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ --iter=3a --files o2_c1_p2_h4.lp 
+
+# To obtain in ABK the constraints used in SAT
+python ./src/main.py Instances/Pigeon_Owner/ -s --iter=1 --files o1_c1_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -s --iter=2 --files o1_c2_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -s --iter=3 --files o2_c1_p3_h6.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -s --iter=3a --files o2_c2_p3_h5.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -s --iter=3a --files o2_c3_p3_h6.lp 
+
+# To obtain in ABK the constraints used in ORD
+python ./src/main.py Instances/Pigeon_Owner/ -o --iter=1 --files o1_c1_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -o --iter=2 --files o1_c2_p3_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -o --iter=3 --files o2_c1_p3_h4.lp 
+
+# To obtain in ABK the constraints used in FULL
+python ./src/main.py Instances/Pigeon_Owner/ -o -f --iter=1 --files o1_c1_p3_h3.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -o -f --iter=2 --files o1_c2_p2_h4.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -o -f --iter=3 --files o2_c1_p2_h5.lp 
+python ./src/main.py Instances/Pigeon_Owner/ -o -f --iter=1a --files o1_c1_p3_h5.lp 

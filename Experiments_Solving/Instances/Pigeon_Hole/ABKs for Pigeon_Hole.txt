@@ -1,0 +1,12 @@
+# To obtain in ABK the constraints used in ENUM
+python ./src/main.py Instances/Pigeon_Hole/ --iter=1 --files p3_h3.lp p3_h4.lp
+python ./src/main.py Instances/Pigeon_Hole/ --iter=1a --files p3_h3.lp p3_h4.lp
+
+# To obtain in ABK the constraints used in SAT
+python ./src/main.py Instances/Pigeon_Hole/ -s --iter=1 --files p3_h3.lp p3_h4.lp p3_h5.lp
+
+# To obtain in ABK the constraints used in ORD
+python ./src/main.py Instances/Pigeon_Hole/ -o --iter=1 --files p3_h3.lp 
+
+# To obtain in ABK the constraints used in FULL
+python ./src/main.py Instances/Pigeon_Hole/ -o -f --iter=1 --files p3_h4.lp 

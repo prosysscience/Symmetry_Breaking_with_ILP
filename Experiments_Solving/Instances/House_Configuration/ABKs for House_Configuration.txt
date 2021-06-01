@@ -1,0 +1,16 @@
+# To obtain in ABK the constraints used in ENUM
+python ./src/main.py Instances/House_Configuration/ --iter=1 --files p1_c2_t2.lp 
+python ./src/main.py Instances/House_Configuration/ --iter=2 --files p2_c2_t4.lp 
+
+# To obtain in ABK the constraints used in SAT
+python ./src/main.py Instances/House_Configuration/ --iter=1 -s --files p1_c2_t2.lp p2_c2_t4.lp
+python ./src/main.py Instances/House_Configuration/ --iter=2 -s --files p2_c3_t4.lp 
+
+# To obtain in ABK the constraints used in ORD
+python ./src/main.py Instances/House_Configuration/ -o --iter=1 --files p1_c2_t4.lp 
+python ./src/main.py Instances/House_Configuration/ -o --iter=1a --files p1_c2_t2.lp 
+python ./src/main.py Instances/House_Configuration/ -o --iter=2 --files p2_c2_t4.lp
+
+# To obtain in ABK the constraints used in FULL
+python ./src/main.py Instances/House_Configuration/ -f -o --iter=1 --files p1_c2_t4.lp 
+python ./src/main.py Instances/House_Configuration/ -f -o --iter=2 --files p2_c2_t4.lp 
