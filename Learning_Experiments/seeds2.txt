@@ -1,0 +1,120 @@
+-f -o --cell 1 --seed 31681
+-f -o --cell 2 --seed 4634
+-f -o --cell 3 --seed 16837
+-f -o --cell 1 --seed 15262
+-f -o --cell 2 --seed 22084
+-f -o --cell 3 --seed 24758
+-f -o --cell 1 --seed 3718
+-f -o --cell 2 --seed 26796
+-f -o --cell 3 --seed 25434
+-f -o --cell 1 --seed 8598
+-f -o --cell 2 --seed 21172
+-f -o --cell 3 --seed 31928
+-f -o --cell 1 --seed 29690
+-f -o --cell 2 --seed 3800
+-f -o --cell 3 --seed 1743
+-f -o --cell 1 --seed 26740
+-f -o --cell 2 --seed 22856
+-f -o --cell 3 --seed 25148
+-f -o --cell 1 --seed 6751
+-f -o --cell 2 --seed 13658
+-f -o --cell 3 --seed 717
+-f -o --cell 1 --seed 16849
+-f -o --cell 2 --seed 29843
+-f -o --cell 3 --seed 8299
+-f -o --cell 1 --seed 6709
+-f -o --cell 2 --seed 24419
+-f -o --cell 3 --seed 14456
+-f -o --cell 1 --seed 11547
+-f -o --cell 2 --seed 7260
+-f -o --cell 3 --seed 21865
+-f -o --cell 1 --seed 16017
+-f -o --cell 2 --seed 29417
+-f -o --cell 3 --seed 25421
+-f -o --cell 1 --seed 10456
+-f -o --cell 2 --seed 25977
+-f -o --cell 3 --seed 20418
+-f -o --cell 1 --seed 3380
+-f -o --cell 2 --seed 4490
+-f -o --cell 3 --seed 29743
+-f -o --cell 1 --seed 14157
+-f -o --cell 2 --seed 69
+-f -o --cell 3 --seed 3023
+-f -o --cell 1 --seed 14690
+-f -o --cell 2 --seed 13524
+-f -o --cell 3 --seed 15622
+-f -o --cell 1 --seed 10222
+-f -o --cell 2 --seed 23256
+-f -o --cell 3 --seed 29764
+-f -o --cell 1 --seed 6652
+-f -o --cell 2 --seed 27221
+-f -o --cell 3 --seed 28577
+-f -o --cell 1 --seed 759
+-f -o --cell 2 --seed 2001
+-f -o --cell 3 --seed 10002
+-f -o --cell 1 --seed 2905
+-f -o --cell 2 --seed 27702
+-f -o --cell 3 --seed 4997
+-f -o --cell 1 --seed 26985
+-f -o --cell 2 --seed 16281
+-f -o --cell 3 --seed 16345
+-f -o --cell 1 --seed 14189 --maxsizecell 200
+-f -o --cell 2 --seed 21352 --maxsizecell 200
+-f -o --cell 3 --seed 14837 --maxsizecell 200
+-f -o --cell 1 --seed 24318 --maxsizecell 200
+-f -o --cell 2 --seed 26740 --maxsizecell 200
+-f -o --cell 3 --seed 23583 --maxsizecell 200
+-f -o --cell 1 --seed 17876 --maxsizecell 200
+-f -o --cell 2 --seed 19383 --maxsizecell 200
+-f -o --cell 3 --seed 7579 --maxsizecell 200
+-f -o --cell 1 --seed 28975 --maxsizecell 200
+-f -o --cell 2 --seed 1459 --maxsizecell 200
+-f -o --cell 3 --seed 7706 --maxsizecell 200
+-f -o --cell 1 --seed 5107 --maxsizecell 200
+-f -o --cell 2 --seed 10838 --maxsizecell 200
+-f -o --cell 3 --seed 21787 --maxsizecell 200
+-f -o --cell 1 --seed 9373 --maxsizecell 200
+-f -o --cell 2 --seed 12399 --maxsizecell 200
+-f -o --cell 3 --seed 5812 --maxsizecell 200
+-f -o --cell 1 --seed 21123 --maxsizecell 200
+-f -o --cell 2 --seed 32737 --maxsizecell 200
+-f -o --cell 3 --seed 2231 --maxsizecell 200
+-f -o --cell 1 --seed 26645 --maxsizecell 200
+-f -o --cell 2 --seed 4448 --maxsizecell 200
+-f -o --cell 3 --seed 12868 --maxsizecell 200
+-f -o --cell 1 --seed 1769 --maxsizecell 200
+-f -o --cell 2 --seed 8467 --maxsizecell 200
+-f -o --cell 3 --seed 14775 --maxsizecell 200
+-f -o --cell 1 --seed 2212 --maxsizecell 200
+-f -o --cell 2 --seed 9472 --maxsizecell 200
+-f -o --cell 3 --seed 1280 --maxsizecell 200
+-f -o --cell 1 --seed 13383 --maxsizecell 200
+-f -o --cell 2 --seed 2517 --maxsizecell 200
+-f -o --cell 3 --seed 20286 --maxsizecell 200
+-f -o --cell 1 --seed 13727 --maxsizecell 200
+-f -o --cell 2 --seed 15928 --maxsizecell 200
+-f -o --cell 3 --seed 18316 --maxsizecell 200
+-f -o --cell 1 --seed 32033 --maxsizecell 200
+-f -o --cell 2 --seed 32598 --maxsizecell 200
+-f -o --cell 3 --seed 11310 --maxsizecell 200
+-f -o --cell 1 --seed 30414 --maxsizecell 200
+-f -o --cell 2 --seed 7830 --maxsizecell 200
+-f -o --cell 3 --seed 31417 --maxsizecell 200
+-f -o --cell 1 --seed 31869 --maxsizecell 200
+-f -o --cell 2 --seed 22564 --maxsizecell 200
+-f -o --cell 3 --seed 7051 --maxsizecell 200
+-f -o --cell 1 --seed 8543 --maxsizecell 200
+-f -o --cell 2 --seed 12158 --maxsizecell 200
+-f -o --cell 3 --seed 16923 --maxsizecell 200
+-f -o --cell 1 --seed 16687 --maxsizecell 200
+-f -o --cell 2 --seed 27416 --maxsizecell 200
+-f -o --cell 3 --seed 21083 --maxsizecell 200
+-f -o --cell 1 --seed 16567 --maxsizecell 200
+-f -o --cell 2 --seed 70 --maxsizecell 200
+-f -o --cell 3 --seed 22154 --maxsizecell 200
+-f -o --cell 1 --seed 16699 --maxsizecell 200
+-f -o --cell 2 --seed 25944 --maxsizecell 200
+-f -o --cell 3 --seed 15838 --maxsizecell 200
+-f -o --cell 1 --seed 2753 --maxsizecell 200
+-f -o --cell 2 --seed 31792 --maxsizecell 200
+-f -o --cell 3 --seed 6602 --maxsizecell 200

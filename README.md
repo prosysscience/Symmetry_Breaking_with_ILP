@@ -1,70 +1,100 @@
 # ILP Symmetry Breaking
 
 ## Overview 
-This project aims to exploit inductive logic programming to lift symmetry breaking constraints of ASP programs.
+This project aims to exploit inductive logic programming to lift symmetry-breaking constraints of ASP programs.
+In particular, we study three distributions of the Partner Unit Problem (PUP).
 
-Given an ASP file, we use the system _SBASS_ (_symmetry-breaking answer set solving_) to infer its graph representation and then detect the symmetries as a graph automorphism problem (performed by the system [_SAUCY_](http://vlsicad.eecs.umich.edu/BK/SAUCY/.)). _SBASS_ returns a set of (irredundant) graph symmetry generators, which are used in our framework to compute the positive and negative examples for the ILP system [_ILASP_](http://www.ilasp.com/?no_animation).
+Given an ASP file, we use the system _SBASS_ (_symmetry-breaking answer set solving_) [1] to infer its graph representation and then detect the symmetries as a graph automorphism problem (performed by the system [_SAUCY_](http://vlsicad.eecs.umich.edu/BK/SAUCY/.)). _SBASS_ returns a set of (irredundant) graph symmetry generators, which are used in our framework to compute the positive and negative examples for the ILP system [_ILASP_](http://www.ilasp.com/?no_animation) [2].
 
-**Note**: the files of _Active Background Knowledge_ (active_BK/active_BK_sat) contain the constraints learned for the experiments. To test the framework, remove the constraints and follow the files' instructions to obtain the same result. 
+The encodings used for PUP (ENC1 and ENC2) are taken from the paper [3]; while, the PUP benchmarks used (double, doublev, and triple) are derived from [4].
 
 ## Project Structure
 
     .
-    ├── \Experiments              # Directory with experiments results 
-    │   ├── experiments.csv         # CSV file with results
-    │   └── experiments             # Script to compare the running-time performance     
+    ├── \Learning_Experiments       # Directory with learning experiments data 
+    │   ├── \Analysis                   # Directory with elaborated data 
+    │   ├── \Results                    # Directory with raw data 
+    │   ├── create_seeds.sh             # Script to generate seeds for tests  
+    │   └── run_experiments.sh          # Script to run experiments 
     │
-    ├── \Instances              # Directory with problem instances
-    │   ├── \House_Configuration     # House-Configuration Problem     
-    │   ├── \Pigeon_Owner            # Pigeon-Hole Problem with colors and owners extension   
-    │   ├── \Pigeon_Color            # Pigeon-Hole Problem with colors extension
-    │   └── \Pigeon_Hole             # Pigeon-Hole Problem  
+    ├── \PUP                        # Directory with PUP benchmarks
+    │   ├── \double                     # Framework inputs with instances draw from double 
+    │   │                                  (use default scoring function for ILASP)    
+    │   ├── \double_weight              # Framework inputs with instances draw from double 
+    │   │                                  (use custom scoring function for ILASP)    
+    │   ├── \doublev                    # Framework inputs with instances draw from doublev 
+    │   │                                  (use default scoring function for ILASP) 
+    │   ├── \doublev_weight             # Framework inputs with instances draw from doublev 
+    │   │                                  (use custom scoring function for ILASP)   
+    │   ├── \triple                     # Framework inputs with instances draw from triple 
+    │   │                                  (use default scoring function for ILASP)  
+    │   └── \triple_weight              # Framework inputs with instances draw from triple 
+    │                                      (use custom scoring function for ILASP) 
+    │
+    ├── \Scrips_for_instances       # Directory with description and scripts for creating instances 
+    │   ├── \double                     # Instances draw from double 
+    │   ├── \doublev                    # Instances draw from doublev 
+    │   └── \triple                     # Instances draw from triple 
+    │
+    ├── \Set_Env                    # Instruction for setting the Conda env used for experiments
+    │   ├── conda_server.txt            # Conda environment 
+    │   └── libclingo.so.4              # Clingo library
+    │
+    ├── \Solving_Experiments        # Directory with solving experiments data 
+    │   ├── \double                     # Directory with ABK and inputs for double
+    │   ├── \doublev                    # Directory with ABK and inputs for doublev
+    │   ├── \triple                     # Directory with ABK and inputs for triple 
+    │   ├── ENC1.lp                     # PUP encoding without SBCs 
+    │   ├── ENC2.lp                     # Advanced PUP encoding with SBCs 
+    │   └── solving_experiments.sh      # Script to run solving experiments 
     │
     ├── \src                    # Sources  
-    │   ├── \ILASP4                  # ILASP4 
+    │   ├── \ILASP4.2                # ILASP4 
     │   ├── \SBASS                   # SBASS 
     │   ├── file_names.py            # Python module with file names
-    │   ├── parser.py                # Main python file: create the positive and negative examples from SBASS output
-    │   ├── remove.py                # Auxiliary python file to remove duplicate in smodels file
-    │   └── permutations.lp          # ASP file which computes the (partial) non symmetric 
-    │                                  permutations of atoms
+    │   ├── generate_examples.py     # Python file to create positive and negative examples from SBASS output
+    │   ├── ilasp4.py                # Pylasp script generated from ILASP4 (default)
+    │   ├── main.py                  # Main Python file
+    │   ├── permutations.lp          # ASP files that encode the lex-leader approach
+    │   ├── structures.py            # Python file with data structures 
+    │   └── vio_sub.lp               # Edited Pylasp script that uses the new conflict analysis
     │
     ├── .gitignore 
     ├── .gitattributes
-    ├── ILP_SBC                 # Script that runs SBASS and lift the SBC found using ILASP
     └── README.md
 
+## Brief Descriptions of Directories 
+*  _**src**_ contains the programs and python scripts used for implementing the framework.
+
+*  _**PUP**_ contains the inputs of our framework ($P,S,Gen,ABK,H_M$) for each PUP benchmark analysed.
+The three directories, double, doublev and triple, contain the search space for ILASP without overwriting its scoring function; while, the three directories finishing with "_weight" contain the search space for ILASP with an alternative scoring function.
+
+*  _**Scrips_for_instances**_ contains the description of the labeling and topology of the PUP instances analysed for each distribution.
+
+*  _**Set_Env**_  contains the instruction for setting the Conda env used for experiments.
+
+*  _**Learning_Experiments**_ contains the raw results and analysis obtained by computing the ILP task 120 times for each considered parameter. 
+
+*  _**Solving_Experiments**_ contains the files used to compare the solving performance of the fastest constraints learned with our approach vs ENC1 (base encoding without SBCs), ENC2 (advanced encoding with SBCs modelled by experts) and SBASS+solving with ground SBCs.
 
 ## Prerequisites
 
 * [Python3](https://www.python.org/downloads/)
 * [Clingo](https://potassco.org/clingo/) 
 * [ILASP4 dependencies](https://doc.ilasp.com/installation.html) 
+* [(Optional) Conda](https://docs.conda.io/projects/conda/en/latest/index.html) 
 
-## Usage
-### 1) Create default positive examples 
-Create the default positive examples for Pigeon_Hole problem: each instance in the directory Gen
-generate a positive example. 
-
-    $ .\ILP_SBC -g .\Instances\Pigeon_Hole
-
-### 2) Create positive and negative examples 
-#### Default mode: each non-symmetric answer set defines a positive example
-     $ .\ILP_SBC -d .\Instances\Pigeon_Hole
-
-
-#### Satisfiable mode: define a single positive example with empty inclusions and exclusions
-     $ .\ILP_SBC -s .\Instances\Pigeon_Hole
-
-
-### 3) Run ILASP to extend the active background knowledge
-     $ .\ILP_SBC -i .\Instances\Pigeon_Hole
+## Example of usage
+    First update CLINGOPATH in the file "./src/file_names.py" with your Clingo path.
+    $ python ./src/main.py PUP/double/ -v --cell 1 -f 
+## For more information 
+    $ python ./src/main.py --help
 
 
 
 ## Citations
 
-C. Drescher, O. Tifrea, and T. Walsh, “Symmetry-breaking answer set solving” (SBASS)
+[1] C. Drescher, O. Tifrea, and T. Walsh, “Symmetry-breaking answer set solving” (SBASS)
 ```
 @article{drescherSymmetrybreakingAnswerSet2011,
 	title = {Symmetry-breaking answer set solving},
@@ -78,7 +108,7 @@ C. Drescher, O. Tifrea, and T. Walsh, “Symmetry-breaking answer set solving”
 }
 ```
 
-M. Law, A. Russo, and K. Broda, “The {ILASP} System for Inductive Learning of Answer Set Programs” (ILASP)
+[2] M. Law, A. Russo, and K. Broda, “The {ILASP} System for Inductive Learning of Answer Set Programs” (ILASP)
 ```
 @article{larubr20b,
      title = {The {ILASP} System for Inductive Learning of Answer Set Programs},
@@ -92,5 +122,31 @@ M. Law, A. Russo, and K. Broda, “The {ILASP} System for Inductive Learning of 
      howpublished = {\url{www.ilasp.com}},
      note = {Accessed: 2020-10-01},
      year={2020}
+}
+```
+
+[3] Dodaro, C., Gasteiger, P., Leone, N., Musitsch, B., Ricca, F., and Schekotihin, K. 
+"Combining answer set programming and domain heuristics for solving hard industrial problems."
+```
+@article{dogalemurish16a,
+  author  = {C. Dodaro and P. Gasteiger and N. Leone and B. Musitsch and F. Ricca and K. Schekotihin},
+  journal = {Theory and Practice of Logic Programming},
+  title   = {Combining Answer Set Programming and Domain Heuristics for Solving Hard Industrial Problems (application paper)},
+  year    = {2016}
+}
+```
+
+[4] Aschinger, M., Drescher, C., Friedrich, G., Gottlob, G., Jeavons, P., Ryabokon, A., and Thorstensen, E.
+"Optimization methods for the partner units problem."
+```
+@inproceedings{DBLP:conf/cpaior/AschingerDFGJRT11,
+	author    = {M. Aschinger and C. Drescher and G. Friedrich and G. Gottlob and P. Jeavons and A. Ryabokon and E. Thorstensen},
+	title     = {Optimization Methods for the Partner Units Problem},
+	booktitle = {CPAIOR},
+	series    = {LNCS},
+	volume    = {6697},
+	pages     = {4--19},
+	publisher = {Springer},
+	year      = {2011}
 }
 ```
