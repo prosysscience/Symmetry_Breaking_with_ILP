@@ -59,8 +59,7 @@ The encodings used for PUP (ENC1 and ENC2) are taken from the paper [3]; while, 
     │   ├── structures.py            # Python file with data structures 
     │   └── vio_sub.lp               # Edited Pylasp script that uses the new conflict analysis
     │
-    ├── .gitignore 
-    ├── .gitattributes
+    ├── Appendix.pdf                 # Appendix with example of sbca
     └── README.md
 
 ## Brief Descriptions of Directories 
