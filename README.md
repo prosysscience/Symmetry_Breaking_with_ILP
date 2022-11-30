@@ -1,96 +1,55 @@
-# ILP Symmetry Breaking
-
-## Overview 
-This project aims to exploit inductive logic programming to lift symmetry breaking constraints of ASP programs.
-
-Given an ASP file, we use the system _SBASS_ (_symmetry-breaking answer set solving_) to infer its graph representation and then detect the symmetries as a graph automorphism problem (performed by the system [_SAUCY_](http://vlsicad.eecs.umich.edu/BK/SAUCY/.)). _SBASS_ returns a set of (irredundant) graph symmetry generators, which are used in our framework to compute the positive and negative examples for the ILP system [_ILASP_](http://www.ilasp.com/?no_animation).
-
-**Note**: the files of _Active Background Knowledge_ (active_BK/active_BK_sat) contain the constraints learned for the experiments. To test the framework, remove the constraints and follow the files' instructions to obtain the same result. 
-
 ## Project Structure
 
     .
-    ├── \Experiments              # Directory with experiments results 
-    │   ├── experiments.csv         # CSV file with results
-    │   └── experiments             # Script to compare the running-time performance     
+    ├── \Learning_Experiments       # Directory with learning experiments data 
     │
-    ├── \Instances              # Directory with problem instances
-    │   ├── \House_Configuration     # House-Configuration Problem     
-    │   ├── \Pigeon_Owner            # Pigeon-Hole Problem with colors and owners extension   
-    │   ├── \Pigeon_Color            # Pigeon-Hole Problem with colors extension
-    │   └── \Pigeon_Hole             # Pigeon-Hole Problem  
+    ├── \Problems                   # Directory with framework inputs for tested problems
+    │   ├── \FastFood                     
+    │   ├── \House_Configuration       
+    │   ├── \Pigeon_Color 
+    │   ├── \Pigeon_Hole  
+    │   ├── \Pigeon_Owner  
+    │   └── \PUP                    # Directory with all PUP benchmarks
+    │
+    ├── \Set_Env                    # Instructions for setting the Conda environment
+    │   ├── conda_env.txt            # Conda environment 
+    │   └── README.md                # Instructions
+    │
+    ├── \Solving_Experiments        # Directory with solving experiments data 
     │
     ├── \src                    # Sources  
-    │   ├── \ILASP4                  # ILASP4 
+    │   ├── \ILASP4.3                # ILASP4.3 
     │   ├── \SBASS                   # SBASS 
     │   ├── file_names.py            # Python module with file names
-    │   ├── parser.py                # Main python file: create the positive and negative examples from SBASS output
-    │   ├── remove.py                # Auxiliary python file to remove duplicate in smodels file
-    │   └── permutations.lp          # ASP file which computes the (partial) non symmetric 
-    │                                  permutations of atoms
+    │   ├── generate_examples.py     # Python file to create positive and negative examples from SBASS output
+    │   ├── ilasp4.3.py              # Edited Pylasp script
+    │   ├── main.py                  # Main Python file
+    │   ├── permutations.lp          # ASP files that encode the lex-leader approach
+    │   └── structures.py            # Python file with data structures 
     │
-    ├── .gitignore 
-    ├── .gitattributes
-    ├── ILP_SBC                 # Script that runs SBASS and lift the SBC found using ILASP
     └── README.md
 
+## Brief Descriptions of Directories 
+*  _**src**_ contains the programs and python scripts used for implementing the framework.
+
+*  _**Problems**_ contains the inputs of the framework ($P,S,Gen,ABK,H_M$) for each problem analysed.
+
+*  _**Set_Env**_  contains the instruction for setting the Conda env used for experiments.
+
+*  _**Learning_Experiments**_ contains the results of Learning Experiments.
+
+*  _**Solving_Experiments**_ contains the results of Solving Experiments.
 
 ## Prerequisites
 
 * [Python3](https://www.python.org/downloads/)
 * [Clingo](https://potassco.org/clingo/) 
 * [ILASP4 dependencies](https://doc.ilasp.com/installation.html) 
+* [(Optional) Conda](https://docs.conda.io/projects/conda/en/latest/index.html) 
 
-## Usage
-### 1) Create default positive examples 
-Create the default positive examples for Pigeon_Hole problem: each instance in the directory Gen
-generate a positive example. 
+## Example of usage
+    $ python ./src/main.py ./Problems/PUP/double/ -v --cell 1 -f 
 
-    $ .\ILP_SBC -g .\Instances\Pigeon_Hole
+## For more information 
+    $ python ./src/main.py --help
 
-### 2) Create positive and negative examples 
-#### Default mode: each non-symmetric answer set defines a positive example
-     $ .\ILP_SBC -d .\Instances\Pigeon_Hole
-
-
-#### Satisfiable mode: define a single positive example with empty inclusions and exclusions
-     $ .\ILP_SBC -s .\Instances\Pigeon_Hole
-
-
-### 3) Run ILASP to extend the active background knowledge
-     $ .\ILP_SBC -i .\Instances\Pigeon_Hole
-
-
-
-## Citations
-
-C. Drescher, O. Tifrea, and T. Walsh, “Symmetry-breaking answer set solving” (SBASS)
-```
-@article{drescherSymmetrybreakingAnswerSet2011,
-	title = {Symmetry-breaking answer set solving},
-	volume = {24},
-	doi = {10.3233/AIC-2011-0495},
-	number = {2},
-	journal = {AI Commun.},
-	author = {Drescher, Christian and Tifrea, Oana and Walsh, Toby},
-	year = {2011},
-	pages = {177--194}
-}
-```
-
-M. Law, A. Russo, and K. Broda, “The {ILASP} System for Inductive Learning of Answer Set Programs” (ILASP)
-```
-@article{larubr20b,
-     title = {The {ILASP} System for Inductive Learning of Answer Set Programs},
-     author = {M. Law and A. Russo  and K. Broda},
-     journal = {The Association for Logic Programming Newsletter},
-     year = {2020}
-}
-@misc{ilasp,
-     author = {M. Law and A. Russo  and K. Broda},
-     title = {Ilasp Releases},
-     howpublished = {\url{www.ilasp.com}},
-     note = {Accessed: 2020-10-01},
-     year={2020}
-}
-```

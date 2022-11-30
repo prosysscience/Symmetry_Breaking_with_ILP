@@ -1,0 +1,5 @@
+-f --iter=1 --files p1_c3_t4.lp 
+-f --iter=1 --files p1_c2_t4.lp 
+-f --iter=2 --files p2_c2_t3.lp 
+-f --iter=2 --files p2_c3_t5.lp 
+-f --iter=2 --files p2_c2_t3.lp p2_c3_t5.lp

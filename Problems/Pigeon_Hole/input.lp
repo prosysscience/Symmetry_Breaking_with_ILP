@@ -1,0 +1,7 @@
+pigeon(X-1) :- pigeon(X), X > 1.
+hole(X-1) :- hole(X), X > 1.
+
+{assign(P,H) : hole(H)} = 1 :- pigeon(P).
+:- assign(P1,H), assign(P2,H), P1 != P2.
+
+ :~ assign(P,H). [H@1]

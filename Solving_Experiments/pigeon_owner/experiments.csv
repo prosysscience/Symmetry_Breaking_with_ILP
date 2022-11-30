@@ -1,0 +1,21 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+./pigeon_owner/,ABK,o10_c10_p10_h19,OPTIMUM FOUND,55 55 100,0.796,0.26
+./pigeon_owner/,BASE,o10_c10_p10_h19,SATISFIABLE,55 55 100,300.000,299.48
+./pigeon_owner/,ABK,o12_c12_p12_h23,OPTIMUM FOUND,78 78 144,2.387,0.89
+./pigeon_owner/,BASE,o12_c12_p12_h23,UNKNOWN,,300.000,298.52
+./pigeon_owner/,ABK,o14_c14_p14_h27,OPTIMUM FOUND,105 105 196,6.605,3.43
+./pigeon_owner/,BASE,o14_c14_p14_h27,UNKNOWN,,300.000,296.89
+./pigeon_owner/,ABK,o16_c16_p16_h31,OPTIMUM FOUND,136 136 256,17.501,10.76
+./pigeon_owner/,BASE,o16_c16_p16_h31,UNKNOWN,,300.000,293.60
+./pigeon_owner/,ABK,o18_c18_p18_h35,OPTIMUM FOUND,171 171 324,45.171,31.89
+./pigeon_owner/,BASE,o18_c18_p18_h35,UNKNOWN,,300.000,287.71
+./pigeon_owner/,ABK,o20_c20_p20_h39,OPTIMUM FOUND,210 210 400,89.051,68.00
+./pigeon_owner/,BASE,o20_c20_p20_h39,SATISFIABLE,210 210 400,300.000,277.86
+./pigeon_owner/,ABK,o22_c22_p22_h43,OPTIMUM FOUND,253 253 484,180.655,143.46
+./pigeon_owner/,BASE,o22_c22_p22_h43,UNKNOWN,,300.000,264.95
+./pigeon_owner/,ABK,o5_c5_p5_9h,OPTIMUM FOUND,15 15 25,0.018,0.00
+./pigeon_owner/,BASE,o5_c5_p5_9h,OPTIMUM FOUND,15 15 25,1.406,1.39
+./pigeon_owner/,ABK,o6_c6_p6_h11,OPTIMUM FOUND,21 21 36,0.038,0.00
+./pigeon_owner/,BASE,o6_c6_p6_h11,OPTIMUM FOUND,21 21 36,66.259,66.23
+./pigeon_owner/,ABK,o8_c8_p8_h15,OPTIMUM FOUND,36 36 64,0.197,0.05
+./pigeon_owner/,BASE,o8_c8_p8_h15,SATISFIABLE,36 36 64,300.000,299.85

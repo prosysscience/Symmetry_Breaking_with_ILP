@@ -1,0 +1,1 @@
+owner(6). color(6). pigeon(6). hole(11).

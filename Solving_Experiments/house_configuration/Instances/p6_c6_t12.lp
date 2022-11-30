@@ -1,0 +1,1 @@
+person(6). cabinet(6). thing(12).

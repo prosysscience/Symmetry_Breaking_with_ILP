@@ -1,0 +1,31 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+./double/,ABK,2-double-10,OPTIMUM FOUND,7,0.03,0.02
+./double/,ENC2,2-double-10,OPTIMUM FOUND,7,0.221,0.21
+./double/,BASE,2-double-10,SATISFIABLE,7,300,299.99
+./double/,ABK,2-double-12,OPTIMUM FOUND,8,0.057,0.05
+./double/,ENC2,2-double-12,OPTIMUM FOUND,8,1.295,1.28
+./double/,BASE,2-double-12,SATISFIABLE,8,300,299.99
+./double/,ABK,2-double-14,OPTIMUM FOUND,10,0.075,0.06
+./double/,ENC2,2-double-14,OPTIMUM FOUND,10,167.002,166.99
+./double/,BASE,2-double-14,SATISFIABLE,10,300,299.98
+./double/,ABK,2-double-16,OPTIMUM FOUND,11,0.223,0.2
+./double/,ENC2,2-double-16,SATISFIABLE,11,300,299.98
+./double/,BASE,2-double-16,SATISFIABLE,11,300,299.98
+./double/,ABK,2-double-18,OPTIMUM FOUND,13,1.642,1.62
+./double/,ENC2,2-double-18,SATISFIABLE,13,300,299.98
+./double/,BASE,2-double-18,SATISFIABLE,13,300,299.97
+./double/,ABK,2-double-20,OPTIMUM FOUND,14,1.68,1.65
+./double/,ENC2,2-double-20,SATISFIABLE,14,300,299.98
+./double/,BASE,2-double-20,SATISFIABLE,14,300,299.97
+./double/,ABK,2-double-22,OPTIMUM FOUND,16,5.09,5.04
+./double/,ENC2,2-double-22,SATISFIABLE,16,300,299.97
+./double/,BASE,2-double-22,SATISFIABLE,16,300,299.96
+./double/,ABK,2-double-34,OPTIMUM FOUND,25,192.49,192.38
+./double/,ENC2,2-double-34,SATISFIABLE,25,300,299.92
+./double/,BASE,2-double-34,SATISFIABLE,25,300,299.82
+./double/,ABK,2-double-36,OPTIMUM FOUND,26,126.968,126.83
+./double/,ENC2,2-double-36,SATISFIABLE,26,300,299.91
+./double/,BASE,2-double-36,SATISFIABLE,26,300,299.82
+./double/,ABK,2-double-38,OPTIMUM FOUND,28,43.42,43.25
+./double/,ENC2,2-double-38,SATISFIABLE,28,300,299.88
+./double/,BASE,2-double-38,SATISFIABLE,28,300,299.78

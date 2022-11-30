@@ -1,0 +1,21 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+./pigeon_color/,ABK,c10_p10_h19,OPTIMUM FOUND,55 100,0.330,0.08
+./pigeon_color/,BASE,c10_p10_h19,SATISFIABLE,55 100,300.000,299.75
+./pigeon_color/,ABK,c12_p12_h23,OPTIMUM FOUND,78 144,1.007,0.36
+./pigeon_color/,BASE,c12_p12_h23,UNKNOWN,,300.000,299.28
+./pigeon_color/,ABK,c14_p14_h27,OPTIMUM FOUND,105 196,2.632,1.11
+./pigeon_color/,BASE,c14_p14_h27,UNKNOWN,,300.000,298.34
+./pigeon_color/,ABK,c16_p16_h31,OPTIMUM FOUND,136 256,6.992,3.51
+./pigeon_color/,BASE,c16_p16_h31,UNKNOWN,,300.000,296.87
+./pigeon_color/,ABK,c18_p18_h35,OPTIMUM FOUND,171 324,16.589,10.52
+./pigeon_color/,BASE,c18_p18_h35,UNKNOWN,,300.000,294.03
+./pigeon_color/,ABK,c20_p20_h39,OPTIMUM FOUND,210 400,36.080,25.40
+./pigeon_color/,BASE,c20_p20_h39,UNKNOWN,,300.000,288.80
+./pigeon_color/,ABK,c22_p22_h43,OPTIMUM FOUND,253 484,71.658,54.23
+./pigeon_color/,BASE,c22_p22_h43,UNKNOWN,,300.000,282.50
+./pigeon_color/,ABK,c24_p24_h47,OPTIMUM FOUND,300 576,127.512,97.97
+./pigeon_color/,BASE,c24_p24_h47,SATISFIABLE,300 576,300.000,271.77
+./pigeon_color/,ABK,c26_p26_h51,OPTIMUM FOUND,351 676,258.580,214.84
+./pigeon_color/,BASE,c26_p26_h51,SATISFIABLE,351 676,300.000,256.76
+./pigeon_color/,ABK,c8_p8_h15,OPTIMUM FOUND,36 64,0.080,0.01
+./pigeon_color/,BASE,c8_p8_h15,OPTIMUM FOUND,36 64,248.754,248.69
