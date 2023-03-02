@@ -1,0 +1,21 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+pigeon_hole/,ABK,p100_h100,UNKNOWN,[108;*],300.000,298.61
+pigeon_hole/,BASE,p100_h100,UNKNOWN,[35;*],300.000,298.88
+pigeon_hole/,ABK,p200_h200,UNKNOWN,[92;*],300.000,286.99
+pigeon_hole/,BASE,p200_h200,UNKNOWN,[33;*],300.000,289.36
+pigeon_hole/,ABK,p20_h20,OPTIMUM FOUND,210,20.947,20.94
+pigeon_hole/,BASE,p20_h20,UNKNOWN,[39;*],300.000,299.99
+pigeon_hole/,ABK,p30_h30,UNKNOWN,[184;*],300.000,299.97
+pigeon_hole/,BASE,p30_h30,UNKNOWN,[38;*],300.000,299.98
+pigeon_hole/,ABK,p40_h40,UNKNOWN,[98;*],300.000,299.94
+pigeon_hole/,BASE,p40_h40,UNKNOWN,[36;*],300.000,299.94
+pigeon_hole/,ABK,p50_h50,UNKNOWN,[122;*],300.000,299.87
+pigeon_hole/,BASE,p50_h50,UNKNOWN,[36;*],300.000,299.87
+pigeon_hole/,ABK,p60_h60,UNKNOWN,[83;*],300.000,299.76
+pigeon_hole/,BASE,p60_h60,UNKNOWN,[35;*],300.000,299.79
+pigeon_hole/,ABK,p70_h70,UNKNOWN,[109;*],300.000,299.51
+pigeon_hole/,BASE,p70_h70,UNKNOWN,[36;*],300.000,299.61
+pigeon_hole/,ABK,p80_h80,UNKNOWN,[106;*],300.000,299.28
+pigeon_hole/,BASE,p80_h80,UNKNOWN,[35;*],300.000,299.40
+pigeon_hole/,ABK,p90_h90,UNKNOWN,[85;*],300.000,298.92
+pigeon_hole/,BASE,p90_h90,UNKNOWN,[36;*],300.000,299.16

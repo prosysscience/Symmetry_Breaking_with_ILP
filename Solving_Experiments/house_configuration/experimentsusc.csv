@@ -1,0 +1,21 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+house_configuration/,ABK,p10_c10_t20,OPTIMUM FOUND,110 110,1.256,0.82
+house_configuration/,BASE,p10_c10_t20,UNKNOWN,[56;*] [0;*],300.000,299.57
+house_configuration/,ABK,p12_c12_t24,OPTIMUM FOUND,156 156,1.581,0.45
+house_configuration/,BASE,p12_c12_t24,UNKNOWN,[78;*] [0;*],300.000,298.88
+house_configuration/,ABK,p14_c14_t28,OPTIMUM FOUND,210 210,4.377,1.79
+house_configuration/,BASE,p14_c14_t28,UNKNOWN,[105;*] [0;*],300.000,297.44
+house_configuration/,ABK,p16_c16_t32,OPTIMUM FOUND,272 272,37.775,32.10
+house_configuration/,BASE,p16_c16_t32,UNKNOWN,[136;*] [0;*],300.000,294.39
+house_configuration/,ABK,p18_c18_t36,OPTIMUM FOUND,342 342,124.208,114.18
+house_configuration/,BASE,p18_c18_t36,UNKNOWN,[171;*] [0;*],300.000,289.97
+house_configuration/,ABK,p20_c20_t40,OPTIMUM FOUND,420 420,79.126,60.70
+house_configuration/,BASE,p20_c20_t40,UNKNOWN,[210;*] [0;*],300.000,281.76
+house_configuration/,ABK,p22_c22_t44,OPTIMUM FOUND,506 506,124.347,95.29
+house_configuration/,BASE,p22_c22_t44,UNKNOWN,[253;*] [0;*],300.000,271.33
+house_configuration/,ABK,p24_c24_t48,OPTIMUM FOUND,600 600,265.143,214.98
+house_configuration/,BASE,p24_c24_t48,UNKNOWN,[300;*] [0;*],300.000,249.46
+house_configuration/,ABK,p6_c6_t12,OPTIMUM FOUND,42 42,0.032,0.01
+house_configuration/,BASE,p6_c6_t12,UNKNOWN,[27;*] [0;*],300.000,299.98
+house_configuration/,ABK,p8_c8_t16,OPTIMUM FOUND,72 72,0.148,0.02
+house_configuration/,BASE,p8_c8_t16,UNKNOWN,[40;*] [0;*],300.000,299.88

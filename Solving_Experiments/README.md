@@ -9,3 +9,5 @@
     $ ./solving.sh ./pigeon_color/
     $ ./solving.sh ./pigeon_hole/
     $ ./solving.sh ./pigeon_owner/
+
+## To repeat the experiments with core-guided optimization (unsatisfiable cores), add --opt-strategy=usc the the clingo call in solving.sh and solving_experiments_PUP.sh

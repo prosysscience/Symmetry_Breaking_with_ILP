@@ -1,0 +1,31 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+triple/,ABK,2-triple-12,OPTIMUM FOUND,8,2.760,2.75
+triple/,ENC2,2-triple-12,OPTIMUM FOUND,8,1.666,1.66
+triple/,BASE,2-triple-12,UNKNOWN,[5;*],300.000,299.99
+triple/,ABK,2-triple-15,UNKNOWN,[9;*],300.000,299.99
+triple/,ENC2,2-triple-15,UNKNOWN,[9;*],300.000,299.99
+triple/,BASE,2-triple-15,UNKNOWN,[5;*],300.000,299.99
+triple/,ABK,2-triple-18,UNKNOWN,[8;*],300.000,299.98
+triple/,ENC2,2-triple-18,UNKNOWN,[9;*],300.000,299.99
+triple/,BASE,2-triple-18,UNKNOWN,[4;*],300.000,299.98
+triple/,ABK,2-triple-21,UNKNOWN,[7;*],300.000,299.97
+triple/,ENC2,2-triple-21,UNKNOWN,[8;*],300.000,299.98
+triple/,BASE,2-triple-21,UNKNOWN,[4;*],300.000,299.97
+triple/,ABK,2-triple-24,UNKNOWN,[8;*],300.000,299.96
+triple/,ENC2,2-triple-24,UNKNOWN,[8;*],300.000,299.97
+triple/,BASE,2-triple-24,UNKNOWN,[4;*],300.000,299.95
+triple/,ABK,2-triple-27,UNKNOWN,[7;*],300.000,299.94
+triple/,ENC2,2-triple-27,UNKNOWN,[8;*],300.000,299.96
+triple/,BASE,2-triple-27,UNKNOWN,[4;*],300.000,299.94
+triple/,ABK,2-triple-30,UNKNOWN,[7;*],300.000,299.89
+triple/,ENC2,2-triple-30,UNKNOWN,[8;*],300.000,299.96
+triple/,BASE,2-triple-30,UNKNOWN,[3;*],300.000,299.92
+triple/,ABK,2-triple-33,UNKNOWN,[7;*],300.000,299.90
+triple/,ENC2,2-triple-33,UNKNOWN,[8;*],300.000,299.95
+triple/,BASE,2-triple-33,UNKNOWN,[3;*],300.000,299.90
+triple/,ABK,2-triple-36,UNKNOWN,[6;*],300.000,299.86
+triple/,ENC2,2-triple-36,UNKNOWN,[7;*],300.000,299.93
+triple/,BASE,2-triple-36,UNKNOWN,[3;*],300.000,299.85
+triple/,ABK,2-triple-9,OPTIMUM FOUND,6,0.041,0.04
+triple/,ENC2,2-triple-9,OPTIMUM FOUND,6,0.034,0.03
+triple/,BASE,2-triple-9,OPTIMUM FOUND,6,25.524,25.52

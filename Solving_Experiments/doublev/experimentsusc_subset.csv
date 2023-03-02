@@ -1,0 +1,31 @@
+Problem,Encoding,Instance,Result,OptVal,Time,Solving
+doublev/,ABK,2-doublev-15,OPTIMUM FOUND,8,0.055,0.05
+doublev/,ENC2,2-doublev-15,OPTIMUM FOUND,8,0.975,0.97
+doublev/,BASE,2-doublev-15,UNKNOWN,[5;*],300,299.99
+doublev/,ABK,2-doublev-18,OPTIMUM FOUND,9,0.1,0.09
+doublev/,ENC2,2-doublev-18,OPTIMUM FOUND,9,36.265,36.26
+doublev/,BASE,2-doublev-18,UNKNOWN,[5;*],300,299.99
+doublev/,ABK,2-doublev-21,OPTIMUM FOUND,11,0.104,0.09
+doublev/,ENC2,2-doublev-21,OPTIMUM FOUND,11,61.77,61.76
+doublev/,BASE,2-doublev-21,UNKNOWN,[4;*],300,299.98
+doublev/,ABK,2-doublev-24,OPTIMUM FOUND,12,0.206,0.18
+doublev/,ENC2,2-doublev-24,UNKNOWN,[9;*],300,299.99
+doublev/,BASE,2-doublev-24,UNKNOWN,[4;*],300,299.97
+doublev/,ABK,2-doublev-27,OPTIMUM FOUND,14,0.629,0.59
+doublev/,ENC2,2-doublev-27,UNKNOWN,[9;*],300,299.98
+doublev/,BASE,2-doublev-27,UNKNOWN,[4;*],300,299.96
+doublev/,ABK,2-doublev-30,OPTIMUM FOUND,15,0.579,0.53
+doublev/,ENC2,2-doublev-30,UNKNOWN,[9;*],300,299.98
+doublev/,BASE,2-doublev-30,UNKNOWN,[4;*],300,299.95
+doublev/,ABK,2-doublev-54,OPTIMUM FOUND,27,25.624,25.37
+doublev/,ENC2,2-doublev-54,UNKNOWN,[9;*],300,299.9
+doublev/,BASE,2-doublev-54,UNKNOWN,[3;*],300,299.67
+doublev/,ABK,2-doublev-57,OPTIMUM FOUND,29,25.296,25
+doublev/,ENC2,2-doublev-57,UNKNOWN,[9;*],300,299.88
+doublev/,BASE,2-doublev-57,UNKNOWN,[3;*],300,299.6
+doublev/,ABK,2-doublev-60,OPTIMUM FOUND,30,49.783,49.42
+doublev/,ENC2,2-doublev-60,UNKNOWN,[7;*],300,299.86
+doublev/,BASE,2-doublev-60,UNKNOWN,[3;*],300,299.54
+doublev/,ABK,2-doublev-75,OPTIMUM FOUND,38,189.524,188.77
+doublev/,ENC2,2-doublev-75,UNKNOWN,[9;*],300,299.72
+doublev/,BASE,2-doublev-75,UNKNOWN,[3;*],300,299.01
